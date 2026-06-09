@@ -1,73 +1,34 @@
-# React + TypeScript + Vite
+# MediLink Hub - Intelligent Healthcare Support Intake Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, concept-level smart intake application designed to streamline resource distribution and prioritization for medical relief NGOs during high-traffic emergency scenarios.
 
-Currently, two official plugins are available:
+## 🚀 Live Links
+* **Production Deployment:** [https://healthcare-hub-five.vercel.app](https://healthcare-hub-five.vercel.app)
+* **Source Repository:** [https://github.com/shashankgadhvi/healthcare-hub](https://github.com/shashankgadhvi/healthcare-hub)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📋 NGO Use-Case & Problem Statement
+During regional crises, disaster responses, or public health emergencies, small-scale non-governmental organizations (NGOs) are flooded with a chaotic influx of messages. Urgent medical requests, general inquiries, and critical volunteer offers mix together across unorganized channels (SMS, unstructured emails, WhatsApp). 
 
-## React Compiler
+Manual filtration creates operational bottlenecks, delaying lifesaving dispatches. **MediLink Hub** solves this by acting as an intelligent frontline gateway—structuring user registries and automatically prioritizing entries the moment they are written.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🤖 Core Automation / AI Triage Concept
+To eliminate manual categorization latency, the application implements a client-side **Deterministic Logic & Pattern Matching Triage Engine (`AiTriage`)** that monitors input changes dynamically:
 
-## Expanding the ESLint configuration
+* **Real-Time Classification:** As a user inputs their details, the engine continuously processes linguistic markers and structural intent tokens.
+* **Smart Priority Routing:** * **Urgent Care Route:** Instantly catches critical trauma flags (e.g., *pain, emergency, bleeding, chest, breathing, accident*) and triggers a high-visibility system alert warning the dispatcher to isolate the case immediately.
+  * **Volunteer Matching Route:** Isolates operational resource indicators (e.g., *help, join, donate, deliver, hours*) and prepares the record to bypass standard medical review, queueing it straight to the onboarding logistics handbook dispatch.
+* **Operational Value:** This layout proves that incoming payloads can be pre-sorted at the edge before hitting any backend infrastructure, reducing the human triage overhead down to zero.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack Architecture
+* **Frontend Library:** React 19 (TypeScript)
+* **Build Tool & Bundler:** Vite
+* **Styling Engine:** Tailwind CSS
+* **Hosting Platform:** Vercel Production Network
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Local Installation & Setup
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+If you want to run this project locally to inspect the components, follow these steps:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/shashankgadhvi/healthcare-hub.git](https://github.com/shashankgadhvi/healthcare-hub.git)
